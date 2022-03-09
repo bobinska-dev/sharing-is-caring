@@ -1,8 +1,8 @@
 import React from "react";
 import { Tooltip, Text, Box, Flex } from '@sanity/ui'
 
-import PubReference from './PubReference'
-import InternalReference from './InternalReference'
+import PubReference from './EditorRenderer/PubReference'
+import InternalReference from './EditorRenderer/InternalReference'
 
 //you probably will have to install react-icons
 import { BsSignpost, BsBriefcase } from "react-icons/bs";

@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { BsSignpost } from "react-icons/bs";
 
-// Internal Reference is a internal link 😎
+
 
 const InternalReference = props => (
 
