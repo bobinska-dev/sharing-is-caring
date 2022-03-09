@@ -10,7 +10,10 @@ import { GiClick } from "react-icons/gi";
 import { IoBookOutline } from "react-icons/io5";
 import { VscFeedback } from "react-icons/vsc";
 
-// This is an example how you can use the values of fields and render them inside of the editor 
+// This is an example how you can use the values of fields and RENDER them inside of the EDITOR 
+// The inline Versions are in the renderer folder and more elegant with types etc. 
+//      Typescript would be more elegant here, but good-old {conditional rendering && } does the trick as well 🤫
+
 const Button = ({ value }) => (
     <Tooltip
         content={
@@ -46,7 +49,7 @@ const Button = ({ value }) => (
     </Tooltip >
 );
 
-
+//This is the editor itself 👇
 
 export default {
     title: 'Enriched Text',
