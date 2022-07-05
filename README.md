@@ -13,7 +13,7 @@ How to systematically generate SEO/Meta information in your studio and use it in
 
 Use PT and see how custom renderer can be generated for the editor in the studio as well as get queries and serializers to work in Next.
 
-## Custom Components for your Studio :fire:
+### Custom Components for your Studio :fire:
 
 Ever wondered how to use Sanity UI in your Studio? Well here are some ideas!
 
