@@ -6,17 +6,19 @@ import { HiOutlineEye } from "react-icons/hi";
 import SocialPreview from 'part:social-preview/component'
 import Iframe from 'sanity-plugin-iframe-pane'
 import resolveProductionUrl from '../../previews/pagePreview'
+
+// this is just a collection of all relevant urlpaths so I don't need to search 
 import { basePathFull } from "../../basePath";
 
 export default S.listItem()
 
     .title('name')
-    .schemaType('stxpe')
+    .schemaType('PASTE_YOUR_TYPE_HERE')
     .icon(VscBrowser)
     .child(
         S.document()
-            .schemaType('stxpe')
-            .documentId('stxpe')
+            .schemaType('PASTE_YOUR_TYPE_HERE')
+            .documentId('PASTE_YOUR_TYPE_HERE')
             .title('Edit Page')
             .views([
                 S.view.form().icon(MdEdit),
