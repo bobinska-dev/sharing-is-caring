@@ -6,7 +6,7 @@ import { BsLink, BsSignpost, BsBriefcase } from "react-icons/bs";
 import YouTube from 'react-youtube'
 import getYouTubeId from 'get-youtube-id'
 import Link from "next/link";
-import SanityBlockContent from '@sanity/block-content-to-react';
+import {PortableText} from '@portabletext/react'
 import { useNextSanityImage } from 'next-sanity-image';
 
 
@@ -31,7 +31,7 @@ const Body = (data) => {
             sanityClient,
             source
         );
-        return <div className={imageClassName}><Image
+        return <div className={imageClassName} ><Image
             {...imageProps}
             layout='responsive'
             objectFit='contain'
@@ -42,7 +42,7 @@ const Body = (data) => {
     }
 
     return (
-        <SanityBlockContent className={className} blocks={body} serializers={{
+        <PortableText value= ={body} className={className} components={
 
             // These are block types, like the youtube object or buttons etc. which are elements of their own in the body[]
             // To use the data from types, you access them through props.node.NameOfField
@@ -140,7 +140,7 @@ const Body = (data) => {
                     )
                 }
             }
-        }} />
+        } />
     );
 }
 
