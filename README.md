@@ -13,7 +13,7 @@ How to systematically generate SEO/Meta information in your studio and use it in
 
 Use PT and see how custom renderer can be generated for the editor in the studio as well as get GROQ queries and serializers to work in Next/React. [See Snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Portable%20Text%20in%20Sanity%20Studio%20and%20React)
 
-### Custom Components for your Studio 
+### Custom Components in your Studio GUI
 
 Ever wondered how to use Sanity UI in your Studio GUI? Well here are some ideas! [See Snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Custom%20Components%20in%20the%20Studio)
 
