@@ -9,7 +9,7 @@ Sanity.io 💙 NextJS.
 
 How to systematically generate SEO/Meta information in your studio and use it in your front end. This might help you get an understanding of how to setup a working `next/meta` component, which you can reuse but also has a default just in case. [See snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Meta%20solution%20for%20NextJS)
 
-### Portable Text glow up
+### Portable Text glow up 💅
 
 Use PT and see how custom renderer can be generated for the editor in the studio as well as get GROQ queries and serializers to work in Next/React. [See Snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Portable%20Text%20in%20Sanity%20Studio%20and%20React)
 
