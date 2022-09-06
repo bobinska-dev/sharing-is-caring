@@ -42,58 +42,57 @@ const Body = (data) => {
     }
 
     return (
-        <PortableText value= ={body} className={className} components={
+        <PortableText value={body} className={className} components={
 
             // These are block types, like the youtube object or buttons etc. which are elements of their own in the body[]
             // To use the data from types, you access them through props.node.NameOfField
 
             types: {
-                image: (props => {
-                    return <BlockImage source={props.node} />
+                image: (value => {
+                    return <BlockImage source={value} />
                 }),
 
-                file: (props) => {
+                file: (value) => {
                     // to make assets (images, files...) downloadable you just add a '?dl' to the url and voilà your file can be served 
-                    return <Button href={props.node.url + '?dl'} color={color || 'carrot'} className={ButtonClassName}>{props.node.title || 'Download'}</Button>
+                    return <Button href={value?.url + '?dl'} color={color || 'carrot'} className={ButtonClassName}>{value.title || 'Download'}</Button>
                 },
 
-                logo: (props => {
-                    return <img src={urlForImage(props.node).width(400)} alt={props.node.title}/>
+                logo: (value => {
+                    return <img src={urlForImage(value).width(400)} alt={'Logo' + value.title}/>
                 }),
 
-                youtube: ({ node }) => {
-                    const { url } = node
+                youtube: ({ value }) => {
+                    const { url } = value
                     const id = getYouTubeId(url)
                     return <div > <YouTube videoId={id} className='youtube' /></div>
                 },
 
-                externalBtn: (props) => {
-                    return <Button href={props.node.url} color={color || 'carrot'} className={ButtonClassName} border external>{props.node.title}</Button>
+                externalBtn: (value) => {
+                    return <Button href={value?.url} color={color || 'carrot'} className={ButtonClassName} border external>{value.title}</Button>
                 },
 
 
-                internalBtn: (props) => {
+                internalBtn: (value) => {
 
                     // if you have nested landing pages (...news/[slug]) you need to take those into account when routing, because you need add the "folder"-syntax to the slug for Link components to work
                     //  Just find out if the reference is to a news-doc and then add '/news' to your slug. If not use the bare queried slug (see lib/queries to understand why it is slug not slug.current here)
 
-                    const link = props.node.reference === 'news' ? `/news${props.node.slug}`
-                        : props.node.slug;
-                    return <Button href={link} color={color || 'carrot'} className={ButtonClassName} border={borderInternal} >{props.node.title}</Button>
+                    const link = value?.reference === 'news' ? `/news${value.slug}`
+                        : value.slug;
+                    return <Button href={link} color={color || 'carrot'} className={ButtonClassName} border={borderInternal} >{value.title}</Button>
                 },
 
-                functionalButton: (props) => {
+                functionalButton: (value) => {
                     /* I just left one line here, so you see, how you can use props given to the body component inside the serializer, which took me some time in the beginning. Maybe it helps  */
-                    if (props.node.element === 'apply') return <Button onClick={() => setModal({ ...modal, apply: true })} color={color || 'carrot'} className={ButtonClassName} border={borderInternal} >{props.node.title}</Button>
+                    if (value.element === 'apply') return <Button onClick={() => setModal({ ...modal, apply: true })} color={color || 'carrot'} className={ButtonClassName} border={borderInternal} >{value.title}</Button>
 
                     /* ... */
                     else return null
                 },
-                testimonial: (props) => {
-                    console.log(props.node)
+                testimonial: (value) => {
                     return (
                         <div className="inline-flex self-center w-2/5 m-6">
-                            <TestimonialCard key={props.node.reference._id} data={props.node.reference} />
+                            <TestimonialCard key={value.reference._id} data={value.reference} />
                         </div>
                     )
                 }
@@ -102,39 +101,39 @@ const Body = (data) => {
             // These are the annotations in richText Schema 
             // To use the data from marks, access them through props.mark.NameOfField
             marks: {
-                link: (props) => {
-                    return <a href={props.mark.url} className='underline' target="_blank" rel="noopener noreferrer">{props.children}  <BsLink className="inline mb-2 text-grey opacity-30" /></a>
+                link: ({children, value}) => {
+                    return <a href={value.url} className='underline' target="_blank" rel="noopener noreferrer">{children}  <BsLink className="inline mb-2 text-grey opacity-30" /></a>
                 },
-                internalLink: (props) => {
+                internalLink: ({children, value}) => {
 
-                    return <Link href={props.mark.slug} ><a className='underline'>{props.children}   <BsSignpost className="inline mb-1 text-grey opacity-30" /></a></Link>
+                    return <Link href={value.slug} ><a className='underline'>{children}   <BsSignpost className="inline mb-1 text-grey opacity-30" /></a></Link>
                 },
-                publication: (props) => {
+                publication: ({children, value}) => {
 
                     return (
                         <span>
                             {/* the text, that is annoted (?) is accessible through props.children */}
-                            <span>{props.children}  <IoBookOutline /></span>
+                            <span>{children}  <IoBookOutline /></span>
                             
                             {/* the info, that is referenced through the annotation can is accessble through props.mark.QueriedInfo (this are the things we defined in lib/queries) */}
                             <SomeAwesomeComponent>
-                                <p className='p-3 mx-3'>{props.mark.reference.title}</p>
-                                <p className='pb-5 mx-6 text-sm text-justify'>{props.mark.reference.description}</p>
-                                <a href={props.mark.reference.url} className='pb-5 mx-6 text-paladin-300' target="_blank" rel="noopener noreferrer">Read full Publication</a>
+                                <p className='p-3 mx-3'>{value.reference.title}</p>
+                                <p className='pb-5 mx-6 text-sm text-justify'>{props.reference.description}</p>
+                                <a href={value.reference.url} className='pb-5 mx-6 text-paladin-300' target="_blank" rel="noopener noreferrer">Read full Publication</a>
                             </SomeAwesomeComponent>
 
                         </span>
                     )
                 },
-                job: (props) => {
+                job: ({children, value}) => {
                     return (
                         <span>
-                            <span >{props.children}  <BsBriefcase /></span>
+                            <span >{children}  <BsBriefcase /></span>
                             <SomeAwesomeComponent>
-                                            <p >{props.mark.reference.title}</p>
-                                            <p >{props.mark.reference.description}</p>
-                                            <p >{props.mark.reference.location}</p>
-                                            <a href={props.mark.reference.url} target="_blank" rel="noopener noreferrer">Read more about the vacancy</a>
+                                            <p >{value.reference.title}</p>
+                                            <p >{value.reference.description}</p>
+                                            <p >{value.reference.location}</p>
+                                            <a href={value.reference.url} target="_blank" rel="noopener noreferrer">Read more about the vacancy</a>
                             </SomeAwesomeComponent>
                         </span>
                     )
