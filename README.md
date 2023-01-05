@@ -13,7 +13,7 @@ All V2 versions of the Chapters can be easily migrated into v3! :blush:
 The code to the guide [Ultimate Guide for customising Portable Text - From schema to React component](https://www.sanity.io/guides/ultimate-guide-for-customising-portable-text-from-schema-to-react-component).
 The guide leads through the all the steps you need to level-up your use of Portable Text: from setting up block content, adding custom blocks and renderers for the Portable Text Editor in your studio. It will also help you query for everything and render your awesome content in React!
 These examples are in Typescript, see the guide for JS. 😎
-[See Snippets]()
+[See Snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Ultimate%20Guide%20for%20customising%20Portable%20Text%20-%20From%20schema%20to%20React%20component)
 
 ### Portable Text glow up 💅 (Sanity V2)
 
