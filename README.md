@@ -23,18 +23,6 @@ The guide leads through the all the steps you need to level-up your use of Porta
 These examples are in Typescript, see the guide for JS. 😎
 [See Snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Ultimate%20Guide%20for%20customising%20Portable%20Text%20-%20From%20schema%20to%20React%20component)
 
-### Portable Text glow up 💅 (Sanity V2)
-
-Use PT and see how custom renderer can be generated for the editor in the studio as well as get GROQ queries and serializers to work in Next/React. [See Snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Portable%20Text%20in%20Sanity%20Studio%20and%20React)
-
-### Meta Solutions for Next.JS (Sanity V2)
-
-How to systematically generate SEO/Meta information in your studio and use it in your front end. This might help you get an understanding of how to setup a working `next/meta` component, which you can reuse but also has a default just in case. [See snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Meta%20solution%20for%20NextJS)
-
-## Feel free to contact me if you need help implementing
-
-Not everything is polished here ... just the most important functionality is up and running and beginners might find it useful :smile:
-
 ## V2 code that still applies to V3 (with minor changes)
 
 ### Customise your Studio structure with Icons and more – While keeping the code clean! (Sanity v2)
@@ -46,3 +34,15 @@ When customising your desk structure, it can be hard to keep track of all parts.
 ### Custom Components in your Studio GUI (Sanity v2)
 
 Ever wondered how to use Sanity UI in your Studio GUI? Well here are some ideas! [See Snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Custom%20Components%20in%20the%20Studio)
+
+### Portable Text glow up 💅 (Sanity V2)
+
+Use PT and see how custom renderer can be generated for the editor in the studio as well as get GROQ queries and serializers to work in Next/React. [See Snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Portable%20Text%20in%20Sanity%20Studio%20and%20React)
+
+### Meta Solutions for Next.JS (Sanity V2)
+
+How to systematically generate SEO/Meta information in your studio and use it in your front end. This might help you get an understanding of how to setup a working `next/meta` component, which you can reuse but also has a default just in case. [See snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Meta%20solution%20for%20NextJS)
+
+## Feel free to contact me if you need help implementing
+
+Not everything is polished here ... just the most important functionality is up and running and beginners might find it useful :smile:
