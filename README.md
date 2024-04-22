@@ -33,6 +33,14 @@ Ever wondered how to use Sanity UI in your Studio GUI? Well here are some ideas!
 
 When customising your desk structure, it can be hard to keep track of all parts. This is why I split the code up in and packed it into singletons (here pages) and `documentType` structures, which are then imported into a `deskStructure/index.js`. This way your code stays readable and managable by people, especially if they have ADHD like me :wink:. `Structure Builder` can be a bit unruly, so here you go .... [See Snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Structure%20Builder%20with%20icons/deskStructure)
 
+## Document Bin - Restoring deleted documents in the studio
+
+Learn how to setup a document bin for restoring deleted documents in Sanity.
+
+This code is explained in the corresponding guide [Create a bin for logging and restoring deleted documents](https://www.sanity.io/guides/bin-for-restoring-deleted-documents). In addition to this code you will need to set up a webhook to listen for deletions and store them in the bin logs.
+
+[See Snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Structure%20Builder%20with%20icons/deskStructure)
+
 ## Feel free to contact me if you need help implementing
 
 Not everything is polished here ... just the most important functionality is up and running and beginners might find it useful :smile:
