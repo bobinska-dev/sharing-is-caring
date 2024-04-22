@@ -12,11 +12,11 @@ This code is explained in the corresponding guide [Create a bin for logging and 
 
 [See Snippets](https://github.com/bobinska-dev/sharing-is-caring/tree/main/Document%20Bin%20-%20Restoring%20deleted%20documents%20in%20the%20studio)
 
-### Ultimate Guide for customising Portable Text - From schema to React component 🌟
+## Ultimate Guide for customising Portable Text - From schema to React component 🌟
 
 Here you will find the code to the guide [Ultimate Guide for customising Portable Text - From schema to React component](https://www.sanity.io/guides/ultimate-guide-for-customising-portable-text-from-schema-to-react-componentt).
 
-#### Code with comments (Sanity V3)
+### Code with comments (Sanity V3)
 
 The code to the guide [Ultimate Guide for customising Portable Text - From schema to React component](https://www.sanity.io/guides/ultimate-guide-for-customising-portable-text-from-schema-to-react-component).
 The guide leads through the all the steps you need to level-up your use of Portable Text: from setting up block content, adding custom blocks and renderers for the Portable Text Editor in your studio. It will also help you query for everything and render your awesome content in React!
