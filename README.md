@@ -1,8 +1,6 @@
 # sharing-is-caring
 
-Some Snippet ppl might find useful
-Sanity.io 💙 NextJS.
-All V2 versions of the Chapters can be easily migrated into v3! :blush:
+Some Snippet ppl might find useful as well as some guides I wrote for Sanity.io. I am also happy to help with any questions you might have. :smile:
 
 ## Table of Content
 
