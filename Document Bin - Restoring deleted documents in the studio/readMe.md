@@ -13,4 +13,4 @@ Set up a custom bin logic in your Studio, enabling users to restore deleted docu
 
 - Create a [custom input component](https://github.com/bobinska-dev/sharing-is-caring/blob/main/Document%20Bin%20-%20Restoring%20deleted%20documents%20in%20the%20studio/DeletionLogInputComponent.tsx) for the deletedDocLogs array, which will remove all document logs, which have been restored already.
 
-- Set up a webhook which will be triggered upon deletion of a subset of documents. This webhook will hit the mutation endpoint and patch the deleted document information we need to the logs of the bin singleton document ([follow step 4 from the guide](https://www.sanity.io/guides/bin-for-restoring-deleted-documents#172fc803a83d))
+- Set up a webhook which will be triggered upon deletion of a subset of documents. This webhook will hit the mutation endpoint and patch the deleted document information we need to the logs of the bin singleton document ([follow step 3 from the guide](https://www.sanity.io/guides/bin-for-restoring-deleted-documents#172fc803a83d))
